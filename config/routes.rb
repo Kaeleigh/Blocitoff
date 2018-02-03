@@ -6,7 +6,9 @@ Rails.application.routes.draw do
 
   get 'welcome/about'
 
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :items, only: [:new, :create]
+  end
 
   root 'users#show'
   #root 'welcome#index'

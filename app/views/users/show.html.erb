@@ -1,11 +1,15 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 profile">
-      <h2>User: <%= @user.email %> </h2>
+      <h2>User: <%= current_user.email %> </h2>
     </div>
 
-    <div class="col-md-8 to-do">
-      <h2>My Lists: </h2>
+    <div class="col-md-4 to-do">
+      <%= render partial: 'items/form', locals: { user: current_user } %>
+    </div>
+
+    <div class="col-md-4">
+      <%= render partial: 'items/item', locals: { user: current_user } %>
     </div>
   </div>
 

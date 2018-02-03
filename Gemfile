@@ -16,7 +16,7 @@ source 'https://rubygems.org'
  group :development do
    # Use sqlite3 as the development database for Active Record
    gem 'sqlite3'
-   gem 'web-console', '~> 2.0'
+   gem 'web-console'
  end
 
  # Use Puma as the app server
