@@ -17,6 +17,5 @@ class ItemsController < ApplicationController
     end
   end
 
-
 #closes class
 end

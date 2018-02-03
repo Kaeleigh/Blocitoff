@@ -4,15 +4,13 @@
       <h2>User: <%= current_user.email %> </h2>
     </div>
 
-    <div class="col-md-4 to-do">
-      <%= render partial: 'items/form', locals: { user: current_user } %>
+    <div class="col-md-4 adding">
+      <%= render partial: 'items/form', locals: { item: @item } %>
     </div>
 
-    <div class="col-md-4">
-      <%= render partial: 'items/item', locals: { user: current_user } %>
+    <div class="col-md-4 to-do">
+      <%= render partial: 'items/item', locals: { item: @item } %>
     </div>
   </div>
-
-
 <!-- 1st div -->
 </div>
