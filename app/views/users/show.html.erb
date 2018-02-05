@@ -1,14 +1,14 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-4 profile">
+    <div>
       <h2>User: <%= current_user.email %> </h2>
     </div>
 
-    <div class="col-md-4 adding">
-      <%= render partial: 'items/form', locals: { item: @item } %>
+    <div class="col-md-6 adding">
+      <%= render 'items/form', locals: { item: @item } %>
     </div>
 
-    <div class="col-md-4 to-do">
+    <div class="col-md-6 to-do">
       <%= render partial: 'items/item', locals: { item: @item } %>
     </div>
   </div>

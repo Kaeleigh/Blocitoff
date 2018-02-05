@@ -1,10 +1,10 @@
 <h2>Add a New Item</h2>
 
-<%= form_for [@user, @item] do |f| %>
+<%= form_for(Item.new, url: user_items_path({user_id: current_user.id}), method: "post") do |f| %>
   <div class="form-group">
-    <% f.text_field :name, class: "form-control", placeholder: "Enter a new task" %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Enter a new task" %>
   </div>
   <div class="form-group">
-    <% f.submit "Submit Task", class: "btn btn-default pull-right" %>
+    <%= f.submit "Submit Task", class: "btn btn-default pull-right" %>
   </div>
 <% end %>

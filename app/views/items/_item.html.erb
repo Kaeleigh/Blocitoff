@@ -1,8 +1,8 @@
-<% @user.items.each do |item| %>
+<% @items.each do |item| %>
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
-        <%= item.name %>
+        <%= @items.name %>
       </h4>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago <br>
