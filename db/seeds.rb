@@ -4,12 +4,12 @@ require 'faker'
 
 #Create fake users
 4.times do
-u = User.new(
+  User.create!(
     email:  Faker::Internet.email,
     password: 'hidden'
   )
-  u.skip_confirmation!
-  u.save!
+  # u.skip_confirmation!
+  # u.save!
 end
 
 users = User.all
