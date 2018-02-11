@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
    def require_sign_in
      unless current_user
        flash[:alert] = "You need to be signed in to do that"
-
        redirect_to new_user_session_path
      end
    end

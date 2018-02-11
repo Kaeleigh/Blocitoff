@@ -1,31 +1,16 @@
 class ItemsController < ApplicationController
-  before_action :require_sign_in, only: [:index]
-
-  def index
-    if !current_user.nil?
-      @user = current_user
-      @item = Item.new
-      @items = @user.items
-    else
-      redirect_to new_user_session_path
-    end
-  end
-
-  def new
-    @item = Item.new
-  end
+  # before_action :require_sign_in, only: [:index]
 
   def create
-    @user = current_user
-    @items = @user.items
-    @item = @user.items.new(item_params)
+    @item = Item.new(item_params)
+    @item.user = current_user
 
     if @item.save
       flash[:notice] = "Item was saved."
     else
       flash[:error] = "Item was not saved. Try again"
     end
-    redirect_to root_path
+    redirect_to user_session_path
   end
 
   private
