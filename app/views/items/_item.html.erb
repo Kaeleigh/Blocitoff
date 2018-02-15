@@ -4,6 +4,8 @@
       <h4 class="media-heading">
         <%= item.name %>
       </h4>
+      <%= link_to "", user_item_path(user_id: @user.id, id: item.id),
+      method: :delete, class: 'complete-icon glyphicon glyphicon-ok', remote: true  %>
       <small>
         submitted <%= time_ago_in_words(item.created_at) %> ago <br>
       </small>

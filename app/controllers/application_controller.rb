@@ -2,18 +2,13 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   before_action :authenticate_user!
+  # private
 
-  def after_sign_in_path_for(resource)
-    user_path(current_user)
-  end
-  
-  private
-
-   def require_sign_in
-     unless current_user
-       flash[:alert] = "You need to be signed in to do that"
-       redirect_to new_user_session_path
-     end
-   end
+  #  def require_sign_in
+  #    unless current_user
+  #      flash[:alert] = "You need to be signed in to do that"
+  #      redirect_to new_user_session_path
+  #    end
+  #  end
 
 end
