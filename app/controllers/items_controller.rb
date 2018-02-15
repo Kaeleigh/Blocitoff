@@ -10,7 +10,7 @@ class ItemsController < ApplicationController
     else
       flash[:error] = "Item was not saved. Try again"
     end
-    redirect_to user_session_path
+    redirect_to root_path
   end
 
   def destroy
