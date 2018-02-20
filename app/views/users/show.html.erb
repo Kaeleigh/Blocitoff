@@ -8,8 +8,8 @@
       <%= render 'items/form', locals: { item: @item } %>
     </div>
 
-    <div class="col-md-6 to-do">
-      <%= render partial: 'items/item', locals: { item: @item } %>
+    <div id= "todoList" class="col-md-6 to-do">
+      <%= render partial: 'items/item', locals: { user: current_user } %>
     </div>
   </div>
 <!-- 1st div -->

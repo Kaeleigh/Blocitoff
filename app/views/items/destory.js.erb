@@ -1,3 +1,6 @@
-$('.complete-icon').bind('ajax:success', function() {
-      $(this).closest('li').fadeOut();
-    }); 
+$("#todoList").html("<%= escape_javascript(render(partial: "items/item", current_user)) %>");
+
+
+// $('.complete-icon').bind('ajax:success', function() {
+//       $(this).closest('h4').fadeOut();
+//     });
