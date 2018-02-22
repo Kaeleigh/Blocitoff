@@ -7,7 +7,7 @@
       <%= link_to "", user_item_path(user_id: user.id, id: item.id),
       method: :delete, class: 'complete-icon glyphicon glyphicon-ok', remote: true  %>
       <small>
-        submitted <%= time_ago_in_words(item.created_at) %> ago <br>
+         <%= distance_of_time_in_words(Time.now, item.created_at.to_date + 7) %> left <br>
       </small>
     </div>
   </div>
